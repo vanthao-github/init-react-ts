@@ -1,0 +1,233 @@
+@import '../../mixins.scss';
+
+.ant-menu.MainMenu {
+	border: none;
+
+  .ant-menu-submenu-title {
+    flex-direction: column;
+
+    @include flex;
+    @include align-items(center);
+    @include justify-content(center);
+
+    div {
+      @include flex;
+      
+    }
+  }
+
+  & > li.ant-menu-submenu {
+    height: 100%;
+    margin: 0 4px;
+    top: 0px;
+    border-bottom: none !important;
+
+    svg {
+      path {
+        fill: #212121;
+      }
+    }
+
+    & > div {
+      height: 100%;
+      padding: 0 24px;
+    }
+
+    div + span {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      padding-top: 10px;
+    }
+
+    &.ant-menu-submenu-active,
+    &.ant-menu-submenu-selected {
+      background: #E4F1FC;
+      border-bottom: none;
+
+      @include border-radius(2px);
+      
+      span {
+        color: #1E88E5;
+      }
+
+
+      svg {
+        path {
+          fill: #1E88E5;
+        }
+      }
+    }
+  }
+
+
+  .ant-menu-submenu-popup {
+    ul {
+      padding: 16px;
+
+      li {
+        padding: 4px 0;
+      }
+    }
+  }
+
+  &.ADM {
+    background: transparent;
+    & > li.ant-menu-submenu {
+      height: 100%;
+      margin: 0 4px;
+      top: 0px;
+      border-bottom: none !important;
+      color: #fff;
+  
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+  
+      &.ant-menu-submenu-active,
+      &.ant-menu-submenu-selected {
+        background: #fff;
+        border-bottom: none;
+        color: #1E88E5;
+  
+        @include border-radius(2px);
+        
+        span {
+          color: #1E88E5;
+        }
+  
+  
+        svg {
+          path {
+            fill: #1E88E5;
+          }
+        }
+      }
+    } 
+
+    .ant-menu-item {
+      height: 100%;
+      margin: 0 4px;
+      border-bottom: none;
+      a {
+        padding: 0 24px;
+        height: 100%;
+        flex-direction: column;
+        @include flex;
+        @include align-items(center);
+        @include justify-content(center);
+        
+        span {
+          margin-top: 10px;
+          font-size: 12px;
+          line-height: 16px;
+          color: #fff;
+        }
+        svg {
+          path {
+            fill: #fff;
+          }
+        }
+      }
+
+      div {
+        @include flex;
+      }
+
+      &.ant-menu-item-active,
+      &.ant-menu-item-selected {
+        background: #fff;
+        border-bottom: none;
+        color: #1E88E5;
+        border-bottom: none;
+  
+        @include border-radius(2px);
+        
+        span {
+          color: #1E88E5;
+        }
+
+        svg {
+          path {
+            fill: #1E88E5;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ant-menu-submenu-popup {
+  ul.ant-menu-vertical {
+    &.ant-menu-sub {
+      padding: 16px;
+    }
+  
+    &#\/transactions\$Menu,
+    &#\/balance\$Menu {
+      @include flex;
+    }
+  
+    .ant-menu-item-group {
+      margin-right: 16px;
+      min-width: 120px;
+  
+      .ant-menu-item-group-title {
+        padding: 0;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;
+        color: #212121;
+        margin-bottom: 8px;
+      }
+  
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected,
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected a {
+    background-color: transparent;
+    color: #212121;
+  }
+  
+  li.ant-menu-item {
+    padding: 0;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    height: auto !important;
+    line-height: 16px !important;
+  
+    a {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+ul.ant-menu-sub.ant-menu-vertical-left {
+  padding: 16px;
+
+  li.ant-menu-item-group {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.ant-menu-item a:hover {
+  color: #1E88E5;
+}

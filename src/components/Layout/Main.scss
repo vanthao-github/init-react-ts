@@ -1,0 +1,82 @@
+.MainLayout {
+	.ant-layout-header  {
+		padding: 0;
+		background: #fff;
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid #f1f2f5;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+
+		.logo {
+			padding: 0 10px;
+			img {
+        width: 180px;
+        height: 40px;
+      }
+
+      span {
+        margin-left: 10px;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 600;
+        padding: 4px 7px;
+        background-color: #fff;
+        color: #1E88E5;
+        border-radius: 11px;
+      }
+    }
+
+		.account-info {
+      display: flex;
+      .avatar {
+        width: 32px;
+        margin-left: 10px;
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+      .info {
+        margin: auto 0;
+        padding: 10px;
+        .fullname {
+          line-height: 16px;
+          font-size: 12px;
+          font-weight: 600;
+        }
+        .email {
+          line-height: 16px;
+          font-size: 10px;
+        }
+      }
+
+      .ant-badge {
+        margin: auto 10px;
+        .anticon {
+        	width: 40px;
+	        svg {
+	        	height: 24px;
+	        }
+        }
+      }
+    }
+
+    &.ADM {
+      background: #212121;
+      color: #fff;
+      border-bottom: none;
+    }
+	}
+  .site-layout {
+    padding-top: 70px;
+    .Content {
+      margin: 20px;
+      &.Small {
+        max-width: 760px;
+        margin: 20px auto;
+      }
+    }
+  }
+}

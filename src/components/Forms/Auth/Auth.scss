@@ -1,0 +1,167 @@
+@import '../../../mixins.scss';
+
+.SignInForm, .ForgotPasswordForm, .ResetPasswordForm, .ChangePasswordForm {
+  label {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #212121;
+
+    &.ant-checkbox-wrapper {
+      span:last-child {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .ant-input, .ant-select-selector, .ant-picker {
+    height: 48px !important;
+  }
+
+  .ant-form-item {
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 16px;
+    }
+  }
+
+  .ForgotPassword {
+    text-align: left;
+    padding: 8px 0 0px 0;
+  }
+
+  .SignInYourPassword {
+    margin-top: 48px;
+    
+    a {
+      color: #1E88E5;
+
+      @include flex;
+      @include justify-content(center);
+
+      & > div {
+        height: 24px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .Register {
+    text-align: center;
+    padding: 20px 0 0;
+  }
+
+  .Contact {
+     padding: 20px 0;
+    .title {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      color: #212121;
+      padding-top: 20px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .FormHeader {
+    background: #FFFFFF;
+    backdrop-filter: blur(54.3656px);
+    border-radius: 4px 4px 0px 0px;
+    padding: 24px 20px;
+    font-size: 20px;
+    line-height: 32px;
+    color: #212121;
+    font-weight: 600;
+
+    .left {
+      margin-left: -20px;
+      border-left: 4px solid #4285f4;
+      padding-left: 20px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      color: #212121;
+    }
+
+  }
+
+  .FormContent {
+    background: #FFFFFF;
+    padding: 0 24px;
+
+    .title {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      color: #212121;
+      padding-bottom: 20px;
+    }
+  }
+
+  .FormFooter {
+    background: #FFFFFF;
+    backdrop-filter: blur(54.3656px);
+    border-radius: 0px 0px 4px 4px;
+    padding: 24px;
+
+    button {
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      text-align: center;
+      font-weight: 400;
+      line-height: 24px;
+      padding-top: 11px;
+      padding-bottom: 11px;
+    }
+
+    .ForgotPassword {
+      a {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        color: #212121;
+      }
+    }
+  }
+
+  .without-password {
+    border-top: 1px solid #E0E0E0;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    a {
+      color:#1E88E5;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 0;
+
+
+      @include flex;
+      @include justify-content(center);
+      @include align-items(center);
+
+      & > div {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .ant-form-item-explain.ant-form-item-explain-error {
+    font-size: 10px;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+  }
+}
+
+.ForgotPasswordForm, .ResetPasswordForm {
+  .FormFooter {
+    padding-bottom: 24px;
+  }
+}

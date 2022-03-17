@@ -1,0 +1,376 @@
+@import '../../mixins.scss';
+
+.SignInPage {
+  &.SME {
+    width: 100%;
+    background: #e3e3e3;
+    height: 100vh;
+    overflow: hidden;
+
+    @include flex;
+
+    .box-left {
+      width: 100%;
+      background-image: url('/bg-image-SME.png');
+      background-size: cover;
+    }
+    .content-page {
+      // min-width: 768px;
+      min-width: 390px;
+      background: #fff;
+
+      .Logo {
+        padding: 56px 24px 48px;
+        text-align: left;
+      }
+
+      .form-container {
+        height: auto;
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+
+        .FormHeader {
+          padding: 0;
+          margin-bottom: 24px;
+
+          .left {
+            border: none;
+            margin-bottom: 24px;
+          }
+        }
+
+        .SignInForm {
+          // width: 45%;
+          padding-left: 0px;
+          padding-right: 0px;
+          margin: 0;
+
+          .FormContent {
+            padding: 0;
+          }
+        }
+
+        .or {
+          margin: 0 36px;
+        }
+
+        .qrCanvas {
+          width: 45%;
+
+          .title {
+            margin-bottom: 32px;
+            &:before {
+              display: none;
+            }
+          }
+
+          .qr-box {
+            padding: 0;
+            box-shadow: none;
+          }
+
+          .qr-canvas-image {
+            min-height: 220px;
+          }
+        }
+
+        .FormFooter {
+          padding: 0;
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+
+  .Logo {
+    text-align: center;
+    padding: 80px 0 40px;
+  }
+  .qrCanvas {
+    width: 390px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+    .qr-box {
+      position: relative;
+      background: #fff;
+      padding: 24px 24px 44px 24px;
+
+      @include border-radius(2px);
+      @include box-shadow(0px 0px 4px 0px rgba(0, 0, 0, 0.08));
+    }
+
+    .qr-canvas-content {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+
+    .qr-canvas-image {
+      width: 100%;
+      border: 4px solid #F4333D;
+      min-height: 240px;
+      padding: 0px !important;
+      position: relative;
+      border-radius: 15px;
+      position: relative;
+      margin: 0 auto;
+
+      img {
+        width: 120px;
+        height: 22px;
+        padding-left: 4px;
+        padding-right: 4px;
+        position: absolute;
+        bottom: -15px;
+        left: 92px;
+        background: #fff;
+      }
+    }
+
+    canvas {
+      width: 100% !important;
+      height: 100% !important;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      padding: 21px;
+    }
+
+    .singpass-app {
+      padding-top: 24px;
+      padding-bottom: 24px;
+      text-align: center;
+
+      a {
+        font-weight: 600;
+        color: $primary-color;
+      }
+    }
+
+    .title {
+      margin-bottom: 40px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      color: #212121;
+      position: relative;
+      
+      &:before {
+        content: '';
+        height: 100%;
+        width: 4px;
+        background: #1E88E5;
+        position: absolute;
+        left: -24px;
+        top: 0;
+      }
+    }
+  }
+
+  .or {
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    margin-left: 48px;
+    margin-right: 48px;
+    position: relative;
+
+    @include flex;
+    @include align-items(center);
+
+    &:before {
+      content: '';
+      width: 1px;
+      height: 47%;
+      background: #E0E0E0;
+      position: absolute;
+      top: 0px;
+      left: 10px;
+    }
+
+    &:after {
+      content: '';
+      width: 1px;
+      height: 47%;
+      background: #E0E0E0;
+      position: absolute;
+      bottom: 0px;
+      left: 10px;
+    }
+  }
+
+  .form-container {
+    width: 902px;
+    margin: 0 auto;
+
+    @include flex;
+  }
+
+  .SignInForm {
+    width: 390px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1199px) and (min-width: 992px) {
+    &.SME {
+      .content-page {
+        min-width: 440px;
+
+        .form-container {
+          display: block;
+  
+          .SignInForm {
+            width: 100%;
+          }
+  
+          .qrCanvas {
+            width: 100%;
+
+            .qr-canvas-image {
+              min-height: 290px;
+            }
+          }
+
+          .or {
+            margin: 36px 0;
+            padding-left: 15px;
+            padding-right: 15px;
+            
+            @include justify-content(center);
+      
+            &:before {
+              content: '';
+              width: 43%;
+              height: 1px;
+              background: #E0E0E0;
+              position: absolute;
+              top: 11px;
+              left: 11px;
+            }
+      
+            &:after {
+              content: '';
+              width: 43%;
+              height: 1px;
+              background: #E0E0E0;
+              position: absolute;
+              top: 11px;
+              left: auto;
+              right: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    &.SME {
+      .box-left {
+        display: none;
+      }
+    }
+
+    .content-page {
+      max-width: 768px;
+      margin: 0 auto;
+    }
+
+    .Logo {
+      padding: 40px 0 40px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &.SME {
+      .content-page {
+        min-width: 440px;
+
+        .form-container {
+          display: block;
+  
+          .SignInForm {
+            width: 100%;
+          }
+  
+          .qrCanvas {
+            width: 100%;
+
+            .qr-canvas-image {
+              min-height: 290px;
+            }
+          }
+
+          .or {
+            margin: 36px 0;
+            padding-left: 15px;
+            padding-right: 15px;
+            
+            @include justify-content(center);
+      
+            &:before {
+              content: '';
+              width: 43%;
+              height: 1px;
+              background: #E0E0E0;
+              position: absolute;
+              top: 11px;
+              left: 11px;
+            }
+      
+            &:after {
+              content: '';
+              width: 43%;
+              height: 1px;
+              background: #E0E0E0;
+              position: absolute;
+              top: 11px;
+              left: auto;
+              right: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 479px) {
+    &.SME {
+      .content-page {
+        min-width: 100%;
+        max-width: 100%;
+
+        .form-container {
+          .qrCanvas {
+            width: 100%;
+      
+            .qr-canvas-content {
+              padding-left: 0px;
+              padding-right: 0px;
+            }
+      
+            .qr-canvas-image {
+              width: 240px;
+              min-height: 240px;
+              
+              img {
+                left: 25%;
+              }
+            }
+          }
+        }
+      }
+
+      .singpass-app {
+        font-size: 12px;
+      }
+    }
+  }
+}
